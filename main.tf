@@ -3,6 +3,14 @@ provider "aws" {
   profile = "felipeprofile"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "profile-infra"
+    key    = "terraform.tfstate"
+    region = "us-east-1"
+    profile = "felipeprofile"
+  }
+}
 
 module "profile_dev" {
   source = "./modules/jenkins"
