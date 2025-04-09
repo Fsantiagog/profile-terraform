@@ -5,7 +5,7 @@ provider "aws" {
 
 
 module "profile_dev" {
-  source = "./jenkins_module"
+  source = "./modules/jenkins"
 
   ami_id = "ami-00a929b66ed6e0de6"
   public_key_path = file("../profile-jenkins.key.pub")
