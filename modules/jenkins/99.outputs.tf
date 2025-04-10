@@ -12,3 +12,7 @@ output "get_initial_password_command" {
   description = "Command to get the initial admin password for Jenkins."
   value = "ssh -i ${var.public_key_path} ec2-user@${aws_instance.jenkins.public_ip} 'sudo cat /var/lib/jenkins/secrets/initialAdminPassword'"
 }
+output "ssh_key_pub" {
+  description = "to see the public key"
+  value = "ssh -i ${var.public_key_path} ec2-user@${aws_instance.jenkins.public_ip} 'sudo cat ~/.ssh/id_rsa.pub'"
+}

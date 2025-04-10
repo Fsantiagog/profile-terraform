@@ -25,3 +25,9 @@ variable "public_key_path" {
     description = "Path to the public key file"
     type = string
 }
+
+variable "bucket_name" {
+    description = "S3 bucket name"
+    type        = string
+    default     = "profile-jenkins-fsantiagog"
+}
