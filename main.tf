@@ -54,3 +54,8 @@ output "show_pub_key" {
   description = "To see the public key"
   value = module.profile_dev.ssh_key_pub
 }
+
+output "cloudfront_url" {
+  value       = module.profile_website_dev.cloudfront_url
+  description = "URL pública del sitio servido por CloudFront"
+}
